@@ -12,7 +12,7 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule
   ],
   templateUrl: './country-cities.component.html',
-  styleUrl: './country-cities.component.css'
+  styleUrl: './country-cities.component.scss'
 })
 export class CountryCitiesComponent {
   public cities: City[] = [];
@@ -36,7 +36,7 @@ export class CountryCitiesComponent {
   getCities() {
     let idParam = this.activatedRoute.snapshot.paramMap.get("id");
     this.id = idParam ? +idParam : -1;
-    this.http.get<City[]>(`${environment.baseUrl}api/Countries/CountryCities/${this.id}`).subscribe(
+    this.http.get<City[]>(`${environment.baseUrl}Countries/CountryCities/${this.id}`).subscribe(
       {
         next: result => this.cities = result,
         error: error => console.error(error)

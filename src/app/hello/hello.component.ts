@@ -14,7 +14,7 @@ interface WeatherForecast {
   standalone: true,
   imports: [],
   templateUrl: './hello.component.html',
-  styleUrl: './hello.component.css'
+  styleUrl: './hello.component.scss'
 })
 export class HelloComponent implements OnInit {
   public forecasts: WeatherForecast[] = [];
