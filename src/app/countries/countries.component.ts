@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
     RouterLink
   ],
   templateUrl: './countries.component.html',
-  styleUrl: './countries.component.css'
+  styleUrl: './countries.component.scss'
 })
 export class CountriesComponent {
   public countries: Country[] = [];
@@ -23,7 +23,7 @@ export class CountriesComponent {
   }
 
   getCountries() {
-    this.http.get<Country[]>(environment.baseUrl + 'api/Countries').subscribe(
+    this.http.get<Country[]>(environment.baseUrl + 'Countries').subscribe(
       {
         next: result => this.countries = result,
         error: error => console.error(error)
