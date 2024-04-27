@@ -8,7 +8,7 @@ import { NavBarComponent } from "./nav-bar/nav-bar.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [RouterOutlet, HttpClientModule, NavBarComponent]
+    imports: [RouterOutlet, NavBarComponent]
 })
 export class AppComponent {
   title = 'WeatherClient';
