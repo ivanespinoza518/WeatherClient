@@ -36,11 +36,11 @@ export class CountryCitiesComponent {
   getCities() {
     let idParam = this.activatedRoute.snapshot.paramMap.get("id");
     this.id = idParam ? +idParam : -1;
-    this.http.get<City[]>(`${environment.baseUrl}Countries/CountryCities/${this.id}`).subscribe(
-      {
+    this.http
+      .get<City[]>(`${environment.baseUrl}Countries/CountryCities/${this.id}`)
+      .subscribe({
         next: result => this.cities = result,
         error: error => console.error(error)
-      }
-    );
+      });
   }
 }
